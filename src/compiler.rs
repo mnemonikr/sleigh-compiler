@@ -111,10 +111,6 @@ impl SleighCompiler {
             .run_compilation(filein.as_ref(), fileout.as_ref())
             .map_err(|err| Error::InternalCompilerError(Box::new(err)))?;
 
-        for warning in &response.warnings {
-            println!("{warning}");
-        }
-
         if response.exit_code == 0 {
             Ok(response)
         } else {
