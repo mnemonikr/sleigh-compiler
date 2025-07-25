@@ -21,7 +21,7 @@ compiler.compile(input_file, output_file)?;
 
 The internal SLEIGH compiler is built from Ghidra 10.4.
 
-The SLEIGH compiler may report warnings in its response which reference command line switches. For details on any reported switches, refer to [SLEIGH compiler usage](ghidra/Ghidra/Features/Decompiler/src/decompile/cpp/slgh_compile.cc#L3687-L3701).
+The SLEIGH compiler may report warnings in its response which reference command line switches. For details on any reported switches, refer to [SLEIGH compiler usage](https://github.com/NationalSecurityAgency/ghidra/blob/1801dc1ee62be73faae29961ec2f17a59423f156/Ghidra/Features/Decompiler/src/decompile/cpp/slgh_compile.cc#L3736-L3747).
 
 ## Related Work
 
