@@ -1,0 +1,13 @@
+[package]
+name = "tests-integration"
+description = "Integration tests"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[dependencies]
+sleigh-compiler = { path = ".." }
+
+[[test]]
+name = "sleigh-compiler"
+path = "sleigh-compiler.rs"
