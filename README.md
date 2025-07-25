@@ -2,6 +2,10 @@
 
 This supports calling the Ghidra SLEIGH compiler from Rust code. Processors in Ghidra are described by `.slaspec` files, but Ghidra operates on the compiled `.sla` files. Now the compiled `.sla` artifacts can be produced directly from Rust code.
 
+## What's New?
+
+See the [CHANGELOG](./CHANGELOG.md) for change details.
+
 ## Usage
 
 ```rust
