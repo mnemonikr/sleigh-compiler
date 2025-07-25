@@ -28,7 +28,7 @@ jobs:
       run: |
         rustup component add llvm-tools-preview
         PATH=$(rustup show home | xargs -I '{}' find {} -name 'llvm-profdata' | xargs -I '{}' dirname {}):$PATH
-        RUSTFLAGS="-C instrument-coverage" cargo test --lib
+        RUSTFLAGS="-C instrument-coverage" cargo test
         find . -name '*.profraw' > profraw-files.txt
         llvm-profdata merge -sparse -f profraw-files.txt -o merged.profdata
         llvm-cov report \
@@ -36,7 +36,7 @@ jobs:
             for file in \
               $( \
                 RUSTFLAGS="-C instrument-coverage" \
-                  cargo test --workspace --lib --no-run --message-format=json \
+                  cargo test --no-run --message-format=json \
                     | jq -r "select(.profile.test == true) | .filenames[]" \
                     | grep -v dSYM - \
               ); \
