@@ -4,7 +4,7 @@ version = "1.0.0"
 edition = "2024"
 license = "Apache-2.0"
 repository = "https://github.com/mnemonikr/sleigh-compiler"
-description = "Enable calling the Ghidra SLEIGH compiler from Rust to compile processor .slaspec files into compiled .sla files"
+description = "Rust bindings for the Ghidra SLEIGH compiler. Used to compile processor .slaspec files into .sla files"
 
 # List includes to avoid including entire Ghidra submodule
 include = [
