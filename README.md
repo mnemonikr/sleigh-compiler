@@ -1,6 +1,6 @@
 ## About
 
-This crate is a thin wrapper around the Ghidra SLEIGH compiler for compiling `.slaspec` files into `.sla` files.
+This supports calling the Ghidra SLEIGH compiler from Rust code. Processors in Ghidra are described by `.slaspec` files, but Ghidra operates on the compiled `.sla` files. Now these artifacts can be produced directly from Rust code.
 
 ## Usage
 
