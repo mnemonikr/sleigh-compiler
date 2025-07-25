@@ -41,7 +41,7 @@ fn main() {
         .file("src/ffi/cpp/slgh_compile.cc")
         .include(source_path) // Header files coexist with cpp files
         .warnings(false) // Not interested in the warnings for Ghidra code
-        .compile("libsla.a");
+        .compile("slacomp.a");
 
     // Rerun if any of the bindings have changed
     println!("cargo:rerun-if-changed=src/ffi/sys.rs");
