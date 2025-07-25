@@ -36,7 +36,7 @@ jobs:
             for file in \
               $( \
                 RUSTFLAGS="-C instrument-coverage" \
-                  cargo test --workspace --lib --no-run --message-format=json \
+                  cargo test --no-run --message-format=json \
                     | jq -r "select(.profile.test == true) | .filenames[]" \
                     | grep -v dSYM - \
               ); \
