@@ -1,6 +1,6 @@
 ## About
 
-This supports calling the Ghidra SLEIGH compiler from Rust code. Processors in Ghidra are described by `.slaspec` files, but Ghidra operates on the compiled `.sla` files. Now these artifacts can be produced directly from Rust code.
+This supports calling the Ghidra SLEIGH compiler from Rust code. Processors in Ghidra are described by `.slaspec` files, but Ghidra operates on the compiled `.sla` files. Now the compiled `.sla` artifacts can be produced directly from Rust code.
 
 ## Usage
 
@@ -21,4 +21,4 @@ The SLEIGH compiler may report warnings in its response which reference command 
 
 ## Related Work
 
-The [libsla](https://crates.io/crates/libsla) crate wraps the Ghidra SLEIGH library to disassemble native instructions into pcode.
+Check out the [libsla](https://crates.io/crates/libsla) crate for interfacing with the Ghidra SLEIGH library to disassemble native instructions into pcode!
