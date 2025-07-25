@@ -11,12 +11,6 @@ namespace rust {
         static void trycatch(Try &&func, Fail &&fail) noexcept {
             try {
                 func();
-            } catch (const ghidra::UnimplError &e) {
-                // Defined in translate.hh, type of LowLevelError
-                fail("UnimplError: " + e.explain);
-            } catch (const ghidra::DataUnavailError &e) {
-                // Defined in loadimage.hh, type of LowLevelError
-                fail("DataUnavailError: " + e.explain);
             } catch (const ghidra::LowlevelError &e) {
                 // Top-level error
                 fail("LowlevelError: " + e.explain);
