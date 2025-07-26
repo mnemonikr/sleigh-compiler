@@ -1,6 +1,6 @@
 ## 2.0.0
 
-**Breaking change**: The SLEIGH compiler now produces _compressed_ .sla files. Tooling based on versions of Ghidra older than 11.1 will not understand this format. Tooling based on older versions of Ghidra should use version 1.0 of this compiler.
+💥 **Breaking change**: The SLEIGH compiler now produces _compressed_ .sla files. Tooling based on versions of Ghidra older than 11.1 will not understand this format. Tooling based on older versions of Ghidra should use version 1.0 of this compiler.
 
 ### Changed
 
