@@ -56,7 +56,6 @@ fn main() {
         // to be used as a library instead of as an executable
         .file("src/ffi/cpp/slgh_compile.cc")
         .include(source_path) // Header files coexist with cpp files
-        //.include(zlib_path) // Header files coexist with cpp files
         .warnings(false) // Not interested in the warnings for Ghidra code
         .compile("slacomp.a");
 
