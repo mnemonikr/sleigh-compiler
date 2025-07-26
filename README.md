@@ -29,7 +29,7 @@ In Ghidra 11.1 the .sla file format was changed to a compressed format. The unco
 
 ```rust
 let mut compiler = SleighCompiler::new(SleighCompilerOptions {
-    // This will produce .sla files compatible with older tooling
+    // This will produce uncompressed .sla files
     debug_output: true,
     ..Default::default()
 });
