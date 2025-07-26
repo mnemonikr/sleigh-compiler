@@ -25,7 +25,7 @@ The SLEIGH compiler may report warnings in its response which reference command 
 
 ### Compatibility
 
-In Ghidra 11.1 the .sla file format was changed to a compressed format. To produce .sla files compatible with tooling based on older versions of Ghidra, set `debug_output: true` in the compiler options.
+In Ghidra 11.1 the .sla file format was changed to a compressed format. If you wish to inspect the output in the uncompressed form set `debug_output` to `true`.
 
 ```rust
 let mut compiler = SleighCompiler::new(SleighCompilerOptions {
@@ -38,7 +38,7 @@ let output_file = std::path::Path::new("x86-64.sla");
 compiler.compile(input_file, output_file)?;
 ```
 
-Note that these uncompressed files are _not_ compatible with tooling based on later versions of Ghidra, and the Ghidra team has no plans to add such support ([#6416](https://github.com/NationalSecurityAgency/ghidra/issues/6416)).
+💥 **These uncompressed files are _not_ compatible with _any_ tooling based on Ghidra**. Later versions of the tooling do not understand this format, and the Ghidra team has no plans to add such support ([#6416](https://github.com/NationalSecurityAgency/ghidra/issues/6416)). Earlier versions of the tooling will reject the uncompressed file because the SLA format version has been bumped from `3` to `4`.
 
 ## Related Work
 
