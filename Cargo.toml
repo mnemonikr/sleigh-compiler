@@ -5,6 +5,7 @@ edition = "2024"
 license = "Apache-2.0"
 repository = "https://github.com/mnemonikr/sleigh-compiler"
 description = "Rust bindings for the Ghidra SLEIGH compiler. Used to compile processor .slaspec files into .sla files"
+categories = ["security", "compilers", "api-bindings"]
 
 # List includes to avoid including entire Ghidra submodule
 include = [
