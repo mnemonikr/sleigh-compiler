@@ -25,7 +25,7 @@ The SLEIGH compiler may report warnings in its response which reference command 
 
 ### Compatibility
 
-In Ghidra 11.1 the .sla file format was changed to a compressed format. If you wish to inspect the output in the uncompressed form set `debug_output` to `true`.
+In Ghidra 11.1 the .sla file format was changed to a compressed format. The uncompressed output can be obtained by setting `debug_output` to `true` in the compiler options.
 
 ```rust
 let mut compiler = SleighCompiler::new(SleighCompilerOptions {
