@@ -1,4 +1,4 @@
-use sleigh_compiler::SleighCompiler;
+use sleigh_compiler::{SleighCompiler, SleighCompilerOptions};
 
 #[test]
 fn compile_x86_x64() -> Result<(), Box<dyn std::error::Error>> {
@@ -16,6 +16,28 @@ fn compile_x86_x64() -> Result<(), Box<dyn std::error::Error>> {
 
     compiler.compile(input_file, &output_file)?;
 
+    assert!(output_file.exists(), "compiled sla file should exist");
+    Ok(())
+}
+
+#[test]
+fn compile_x86_x64_uncompressed() -> Result<(), Box<dyn std::error::Error>> {
+    let mut compiler = SleighCompiler::new(SleighCompilerOptions {
+        debug_output: true,
+        ..Default::default()
+    });
+    let mut input_file = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    input_file.push("ghidra/Ghidra/Processors/x86/data/languages/x86-64.slaspec");
+    assert!(input_file.exists(), "input slaspec file should exist");
+
+    let mut output_file = std::path::PathBuf::from(env!("CARGO_TARGET_TMPDIR"));
+    output_file.push("x86-64-uncompressed.sla");
+
+    if output_file.exists() {
+        std::fs::remove_file(&output_file)?;
+    }
+
+    compiler.compile(input_file, &output_file)?;
     assert!(output_file.exists(), "compiled sla file should exist");
     Ok(())
 }

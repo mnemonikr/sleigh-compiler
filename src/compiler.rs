@@ -49,6 +49,9 @@ pub struct SleighCompilerOptions {
 
     /// Set to `true` if register names are allowed to be case-sensitive
     pub case_sensitive_register_names: bool,
+
+    /// Set to `true` to write the output file using the debug (XML) form of the .sla format
+    pub debug_output: bool,
 }
 
 impl Default for SleighCompilerOptions {
@@ -64,6 +67,7 @@ impl Default for SleighCompilerOptions {
             enforce_local_keyword: false,
             large_temporary_warning: false,
             case_sensitive_register_names: false,
+            debug_output: false,
         }
     }
 }
@@ -89,6 +93,7 @@ impl SleighCompiler {
             options.enforce_local_keyword,
             options.large_temporary_warning,
             options.case_sensitive_register_names,
+            options.debug_output,
         );
 
         Self { compiler }
