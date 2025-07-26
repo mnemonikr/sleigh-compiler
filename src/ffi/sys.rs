@@ -36,6 +36,7 @@ mod bridge {
             enforceLocalKeyWord: bool,
             largeTemporaryWarning: bool,
             caseSensitiveRegisterNames: bool,
+            debugOutput: bool,
         );
 
         #[rust_name = "run_compilation"]
