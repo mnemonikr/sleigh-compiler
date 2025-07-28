@@ -145,6 +145,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "libsla-sys"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f692aac4a119667b9d3796b60a9f2853c6e54bc2201ff6494c80b34cd0bf0897"
+dependencies = [
+ "cxx",
+ "cxx-build",
+]
+
+[[package]]
 name = "link-cplusplus"
 version = "1.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -211,10 +221,11 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "sleigh-compiler"
-version = "2.0.1"
+version = "2.0.2"
 dependencies = [
  "cxx",
  "cxx-build",
+ "libsla-sys",
  "thiserror",
 ]
 

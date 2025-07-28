@@ -1,3 +1,15 @@
+## 2.0.2
+
+### Fixed
+
+- Duplicate object collisions when used with `libsla` no longer occur. Use `libsla-sys` crate instead of building Ghidra source.
+
+## 2.0.1
+
+### Changed
+
+- Clarified compatibility issues introduced in 2.0.0 in [README](README.md)
+
 ## 2.0.0
 
 💥 **Breaking change**: The SLEIGH compiler now produces _compressed_ .sla files. Tooling based on versions of Ghidra older than 11.1 will not understand this format. Tooling based on older versions of Ghidra should use version 1.0 of this compiler.
