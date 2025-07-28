@@ -14,7 +14,7 @@ fn main() {
         .warnings(false) // Not interested in the warnings for Ghidra code
         .compile("slacomp");
 
-    println!("cargo:rustc-link-lib=libsla.a");
+    println!("cargo:rustc-link-lib=sla");
 
     // Rerun if any of the bindings have changed
     println!("cargo:rerun-if-changed=src/ffi/sys.rs");
